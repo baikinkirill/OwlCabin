@@ -19,6 +19,7 @@ public class MoveDirection : MonoBehaviour
 
         if(Physics.Raycast(ray, out hit) && hit.collider.tag == "Cylinder")
         {
+            Debug.DrawLine(ray.origin, hit.point);
             direction = hit.point;
         }
     }
