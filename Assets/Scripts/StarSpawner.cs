@@ -27,7 +27,7 @@ public class StarSpawner : MonoBehaviour
         {
             if (hit.collider.tag == "Cylinder")
             {
-                SpawnStars(hit.point, hit.transform.rotation);
+                SpawnStars(hit.point, Quaternion.FromToRotation(Vector3.forward, hit.normal));
             }
         }
     }
