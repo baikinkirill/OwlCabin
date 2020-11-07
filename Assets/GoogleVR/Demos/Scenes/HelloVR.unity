@@ -474,6 +474,7 @@ GameObject:
   - component: {fileID: 241974680}
   - component: {fileID: 241974679}
   - component: {fileID: 241974681}
+  - component: {fileID: 241974682}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Untagged
@@ -506,7 +507,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 241974678}
   m_LocalRotation: {x: -0.17610319, y: -0.6384738, z: 0.2835922, w: 0.6934799}
-  m_LocalPosition: {x: 0, y: -0.0029170096, z: 0.0070494376}
+  m_LocalPosition: {x: 0, y: -0.00348, z: 0.00772}
   m_LocalScale: {x: 0.00003633418, y: 0.00003633419, z: 0.00003633418}
   m_Children:
   - {fileID: 364631785}
@@ -532,6 +533,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &241974682
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 241974678}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 26.760983, y: 45.88096, z: 44.057793}
+  m_Center: {x: -1.805437, y: 0.4100775, z: -0.93052906}
 --- !u!1 &246655489
 GameObject:
   m_ObjectHideFlags: 0
