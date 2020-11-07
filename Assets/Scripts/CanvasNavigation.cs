@@ -25,19 +25,11 @@ public class CanvasNavigation : MonoBehaviour
             timer += Time.deltaTime;
             if ((int)timer == timeToInteract)
             {
-                if (button == 1)
+                if (button < 5)
                 {
-                    LoadFirstMap();
+                    LoadMap(button);
                 }
-                else if (button == 2)
-                {
-                    LoadSecondMap();
-                }
-                else if (button == 3)
-                {
-                    LoadThirdMap();
-                }
-                else if (button == 4)
+                else if(button == 5)
                 {
                     ChangeDifficulty();
                 }
@@ -59,27 +51,11 @@ public class CanvasNavigation : MonoBehaviour
         button = 0;
     }
 
-    public void LoadFirstMap()
+    public void LoadMap(int mapNum)
     {
         if ((int)timer == timeToInteract)
         {
-            SceneManager.LoadScene("HelloVR");
-        }
-    }
-
-    public void LoadSecondMap()
-    {
-        if ((int)timer == timeToInteract)
-        {
-            SceneManager.LoadScene("");
-        }
-    }
-
-    public void LoadThirdMap()
-    {
-        if ((int)timer == timeToInteract)
-        {
-            SceneManager.LoadScene("");
+            SceneManager.LoadScene(mapNum);
         }
     }
 
