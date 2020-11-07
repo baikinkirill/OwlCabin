@@ -473,7 +473,8 @@ GameObject:
   m_Component:
   - component: {fileID: 241974680}
   - component: {fileID: 241974679}
-  m_Layer: 0
+  - component: {fileID: 241974681}
+  m_Layer: 2
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -505,7 +506,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 241974678}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0.000922}
   m_LocalScale: {x: 0.0022098564, y: 0.0022098555, z: 0.0022098555}
   m_Children:
   - {fileID: 364631785}
@@ -515,6 +516,19 @@ Transform:
   m_Father: {fileID: 246655490}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &241974681
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 241974678}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.7685153, y: 0.48289883, z: 0.6323816}
+  m_Center: {x: 0.020099932, y: -1.336194, z: 3.193722}
 --- !u!1 &246655489
 GameObject:
   m_ObjectHideFlags: 0
@@ -857,7 +871,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 720771562}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Plane (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1595,7 +1609,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1111995420}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Plane (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2069,7 +2083,7 @@ GameObject:
   - component: {fileID: 1493166144}
   - component: {fileID: 1493166143}
   - component: {fileID: 1493166142}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2233,6 +2247,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.01644188
       objectReference: {fileID: 0}
+    - target: {fileID: -7029948723529949830, guid: df6f765d1aa2717439b30a7fdc0cec46,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: -2639638324218457063, guid: df6f765d1aa2717439b30a7fdc0cec46,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2248,10 +2267,35 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -89.99999
       objectReference: {fileID: 0}
+    - target: {fileID: 568317405629727301, guid: df6f765d1aa2717439b30a7fdc0cec46,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: df6f765d1aa2717439b30a7fdc0cec46,
         type: 3}
       propertyPath: m_Name
       value: Plane_Ukrain
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: df6f765d1aa2717439b30a7fdc0cec46,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6905609870639353253, guid: df6f765d1aa2717439b30a7fdc0cec46,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7036213049465896255, guid: df6f765d1aa2717439b30a7fdc0cec46,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8719771546195959716, guid: df6f765d1aa2717439b30a7fdc0cec46,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: df6f765d1aa2717439b30a7fdc0cec46, type: 3}
