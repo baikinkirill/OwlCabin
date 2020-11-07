@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlaneChanger : MonoBehaviour
 {
+    [SerializeField] TextMesh stars;
     [SerializeField] private GameObject[] planes;
     [SerializeField] private int[] onStarChane; //При таких кол-вах собранных звезд будет меняться самолет.
     private int selectedPlane = 0;
@@ -29,6 +30,7 @@ public class PlaneChanger : MonoBehaviour
         Star star = other.GetComponent<Star>();
         points += star.starCost;
         star.onCatch();
+        stars.text = points.ToString();
     }
 
     private void changePlane()
