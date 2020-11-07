@@ -16,7 +16,7 @@ public class CanvasNavigation : MonoBehaviour
 
     public void LoadFirstMap()
     {
-        SceneManager.LoadScene("");
+        SceneManager.LoadScene("HelloVR");
     }
 
     public void LoadSecondMap()

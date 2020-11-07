@@ -7,7 +7,8 @@ public class Star : MonoBehaviour
     public int starCost = 1;
     StarSpawner SP;
     AudioSource AS;
-    [SerializeField]AudioClip AC;
+    [SerializeField] AudioClip AC;
+    [SerializeField] GameObject model;
 
     private void Start()
     {
@@ -23,6 +24,7 @@ public class Star : MonoBehaviour
     }
     IEnumerator destroy()
     {
+        Destroy(model);
         yield return new WaitForSeconds(AC.length);
         Destroy(gameObject);
     }
