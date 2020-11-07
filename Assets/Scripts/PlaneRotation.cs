@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.VersionControl;
 using UnityEngine;
 
 public class PlaneRotation : MonoBehaviour
@@ -10,9 +11,14 @@ public class PlaneRotation : MonoBehaviour
     [SerializeField] private Transform plane;
     [Range(0f, 50f)] [SerializeField] private float ignoreAngle;
     [SerializeField] private Rigidbody rigidbody;
+    private Animator planeAnimator;
     private float angle;
-    private Direction localDirection = Direction.Watting;
     private bool flightStatus = true;   //Отрицательный пока происходит разворот самолета.
+
+    private void Awake()
+    {
+        planeAnimator = plane.GetComponent<Animator>();
+    }
 
     private void FixedUpdate()
     {
@@ -21,33 +27,46 @@ public class PlaneRotation : MonoBehaviour
         Vector3 planeDir = plane.position - gameObject.transform.position;
         planeDir = new Vector3(planeDir.x, 0, planeDir.z);
         angle = Vector3.SignedAngle(targetDir, planeDir, gameObject.transform.up);
-        
+
+
         if (Mathf.Abs(angle) > ignoreAngle)
         {
+            planeAnimator.SetBool("waiting", false);
             if (angle < 0)
             {
-                plane.localScale = new Vector3(plane.localScale.x, plane.localScale.y, Mathf.Abs(plane.localScale.z) * -1);
-                localDirection = Direction.Right;
+                planeAnimator.SetBool("isRight", true);
+                planeAnimator.SetBool("fromLeftToRight", true);
+                planeAnimator.SetBool("isLeft", false);
             }
             else
             {
-                localDirection = Direction.Left;
-                plane.localScale = new Vector3(plane.localScale.x, plane.localScale.y, Mathf.Abs(plane.localScale.z));
+                planeAnimator.SetBool("isLeft", true);
+                planeAnimator.SetBool("fromRightToLeft", true);
+                planeAnimator.SetBool("isRight", false);
             }
         }
         else
         {
-            localDirection = Direction.Watting;
+            planeAnimator.SetBool("waiting", true);
+            planeAnimator.SetBool("isLeft", false);
+            planeAnimator.SetBool("isRight", false);
+            flightStatus = false;
         }
 
-        if(localDirection == Direction.Watting || !flightStatus) { return; }
+        if (!flightStatus) { return; }
 
         LookAt(moveDirection.direction);
     }
 
+    public void updFlightStatus(bool canFligt)
+    {
+        flightStatus = canFligt;
+    }
+
+
     private void Update()
     {
-        PlaneLookAt();
+        //PlaneLookAt();
     }
 
     public void LookAt(Vector3 pos)
@@ -59,14 +78,4 @@ public class PlaneRotation : MonoBehaviour
     {
         plane.rotation = Quaternion.Lerp(moveDirection.gazeTransform.rotation, plane.rotation, Time.deltaTime * 600f);
     }
-
-    enum Direction
-    {
-        Watting,
-        Left,
-        Right,
-        ChangeDirection
-    }
-
-    
 }
