@@ -12,6 +12,7 @@ public class StarSpawner : MonoBehaviour
 
     void Start()
     {
+        difficulty = GameObject.Find("GvrInstantPreviewMain").GetComponent<AngleHandler>().diff;
         startPos = gameObject.transform.position;
         for (int i = 0; i < StartStarsCount; i++)
         {

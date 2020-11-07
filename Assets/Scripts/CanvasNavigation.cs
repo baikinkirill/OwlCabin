@@ -7,16 +7,10 @@ using UnityEngine.SceneManagement;
 public class CanvasNavigation : MonoBehaviour
 {
     [SerializeField] int timeToInteract = 2;
-    StarSpawner SS;
     [SerializeField] Text zone;
     float timer = 0f;
     bool enter = false;
     int button = 0;
-
-    void Start()
-    {
-        SS = GameObject.Find("StarSpawner").GetComponent<StarSpawner>();
-    }
 
     private void Update()
     {
@@ -63,14 +57,15 @@ public class CanvasNavigation : MonoBehaviour
     {
         if ((int)timer == timeToInteract)
         {
-            SS.ChangeDifficulty();
             if (zone.text == "Playzone 180°")
             {
                 zone.text = "Playzone 360°";
+                GameObject.Find("GvrInstantPreviewMain").GetComponent<AngleHandler>().diff = -180;
             }
             else
             {
                 zone.text = "Playzone 180°";
+                GameObject.Find("GvrInstantPreviewMain").GetComponent<AngleHandler>().diff = 0;
             }
         }
     }
