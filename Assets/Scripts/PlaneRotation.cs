@@ -11,13 +11,13 @@ public class PlaneRotation : MonoBehaviour
     [SerializeField] private Transform plane;
     [Range(0f, 50f)] [SerializeField] private float ignoreAngle;
     [SerializeField] private Rigidbody rigidbody;
-    private Animator planeAnimator;
+    [SerializeField] private Animator planeAnimator;
     private float angle;
     private bool flightStatus = true;   //Отрицательный пока происходит разворот самолета.
 
     private void Awake()
     {
-        planeAnimator = plane.GetComponent<Animator>();
+
     }
 
     private void FixedUpdate()

@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class AnimatorState : StateMachineBehaviour
 {
-    [SerializeField] private PlaneRotation planeRotation;
+    [SerializeField] private bool canFligh;
+    private PlaneRotation planeRotation;
     private void Awake()
     {
         planeRotation = GameObject.Find("planeRotator").GetComponent<PlaneRotation>();
@@ -12,6 +13,6 @@ public class AnimatorState : StateMachineBehaviour
 
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        planeRotation.updFlightStatus(true);
+        planeRotation.updFlightStatus(canFligh);
     }
 }
