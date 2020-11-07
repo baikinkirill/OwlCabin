@@ -24,6 +24,7 @@ public class PlaneChanger : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
+        Debug.Log(points);
         if(other.tag != "Star") { return; }
         Star star = other.GetComponent<Star>();
         points += star.starCost;

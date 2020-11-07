@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Star : MonoBehaviour
 {
-    public int starCost { private set; get; }
+    public int starCost = 1;
     StarSpawner SP;
     AudioSource AS;
     [SerializeField]AudioClip AC;
