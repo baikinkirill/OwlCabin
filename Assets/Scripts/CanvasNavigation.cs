@@ -60,12 +60,12 @@ public class CanvasNavigation : MonoBehaviour
             if (zone.text == "Playzone 180°")
             {
                 zone.text = "Playzone 360°";
-                GameObject.Find("GvrInstantPreviewMain").GetComponent<AngleHandler>().diff = -180;
+                AngleHandler.instance.diff = -180;
             }
             else
             {
                 zone.text = "Playzone 180°";
-                GameObject.Find("GvrInstantPreviewMain").GetComponent<AngleHandler>().diff = 0;
+                AngleHandler.instance.diff = 0;
             }
         }
     }
