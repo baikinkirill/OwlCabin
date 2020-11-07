@@ -18,12 +18,32 @@ ModelImporter:
   - first:
       74: 6997882522552206460
     second: Circle|CircleAction
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Glass
+    second: {fileID: 2100000, guid: 65cdd47279f9b5149ad945aa133323fd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal
+    second: {fileID: 2100000, guid: 71e92c1794e606d4e8fd56500645070b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Red
+    second: {fileID: 2100000, guid: 0dab08c288e947945bec31fba14fae1c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: White
+    second: {fileID: 2100000, guid: 826da09181342a64aa76e5e2fa36f1fb, type: 2}
   materials:
-    materialImportMode: 1
-    materialName: 0
+    materialImportMode: 2
+    materialName: 2
     materialSearch: 1
-    materialLocation: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
