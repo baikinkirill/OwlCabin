@@ -5,7 +5,7 @@ using UnityEngine;
 public class Star : MonoBehaviour
 {
     public int starCost { private set; get; }
-    [SerializeField] StarSpawner SP;
+    StarSpawner SP;
 
     private void Start()
     {
