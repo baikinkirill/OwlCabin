@@ -868,7 +868,7 @@ PrefabInstance:
     - target: {fileID: 5263156695829092036, guid: 0ee053e4f015b4847b1e767ddc348b74,
         type: 3}
       propertyPath: m_PlaneDistance
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5263156695829092037, guid: 0ee053e4f015b4847b1e767ddc348b74,
         type: 3}
@@ -1924,7 +1924,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   indecator: {fileID: 1928200790}
-  circleImage: {fileID: 1053093236}
 --- !u!124 &959308591
 Behaviour:
   m_ObjectHideFlags: 0
