@@ -3663,7 +3663,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8210f171bbd05b8409a3189b85fb528f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stars: {fileID: 0}
+  stars: {fileID: 979354428}
   planes:
   - {fileID: 1354233966}
   - {fileID: 1041017011}
