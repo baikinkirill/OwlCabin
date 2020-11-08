@@ -8,7 +8,21 @@ public class CanvasNavigation : MonoBehaviour
 {
     [SerializeField] int timeToInteract = 2;
     [SerializeField] Text zone;
-    float timer = 0f;
+    [SerializeField] Image imageCircle;
+    private float timer
+    {
+        set
+        {
+            _timer = value;
+            updateCircle();
+        }
+
+        get
+        {
+            return _timer;
+        }
+    }
+    private float _timer = 0f;
     bool enter = false;
     int button = 0;
 
@@ -68,5 +82,10 @@ public class CanvasNavigation : MonoBehaviour
                 AngleHandler.instance.diff = 0;
             }
         }
+    }
+
+    private void updateCircle()
+    {
+        imageCircle.fillAmount = timer / 2;
     }
 }
