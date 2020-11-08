@@ -12,12 +12,12 @@ EditorBuildSettings:
     path: Assets/Scenes/HelloVR.unity
     guid: bb36d2905dc634f1c9eecb35beecaca8
   - enabled: 1
-    path: Assets/Scenes/HelloVR sky3.unity
-    guid: 5f98d2e05e0c4c7478b301b12c109b05
+    path: Assets/Scenes/HelloVR 1.unity
+    guid: 0f889de8b5605444c8fa5ecf74a6a25a
   - enabled: 1
-    path: Assets/Scenes/HelloVR sky2.unity
-    guid: db89ebdbd20705747b486e36603d7fe8
+    path: Assets/Scenes/HelloVR 2.unity
+    guid: eea0939eea1e70b48a80f7c6e179229f
   - enabled: 1
-    path: Assets/Scenes/HelloVR sky1.unity
-    guid: f3b649e740812fd49b842459b562d46c
+    path: Assets/Scenes/HelloVR 3.unity
+    guid: 90a14a4439bf96245ab4e136d0726fa6
   m_configObjects: {}
