@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlaneChanger : MonoBehaviour
 {
@@ -31,6 +32,13 @@ public class PlaneChanger : MonoBehaviour
         points += star.starCost;
         star.onCatch();
         stars.text = points.ToString();
+        if (GameController.instance.mode == 1)
+        {
+            if (points >= 250)
+            {
+                SceneManager.LoadScene(0);
+            }
+        }
     }
 
     private void changePlane()

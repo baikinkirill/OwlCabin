@@ -12,7 +12,7 @@ public class StarSpawner : MonoBehaviour
 
     void Start()
     {
-        difficulty = AngleHandler.instance.diff;
+        difficulty = GameController.instance.diff;
         startPos = gameObject.transform.position;
         for (int i = 0; i < StartStarsCount; i++)
         {

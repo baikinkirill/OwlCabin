@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameController : MonoBehaviour
+public class AngleHandler : MonoBehaviour
 {
-    public static GameController instance;
+    public static AngleHandler instance;
     public int diff;
     public int mode = 0;
 

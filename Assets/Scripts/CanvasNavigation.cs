@@ -8,6 +8,7 @@ public class CanvasNavigation : MonoBehaviour
 {
     [SerializeField] int timeToInteract = 2;
     [SerializeField] Text zone;
+    [SerializeField] Text mode;
     [SerializeField] Image imageCircle;
     private float timer
     {
@@ -40,6 +41,10 @@ public class CanvasNavigation : MonoBehaviour
                 else if(button == 5)
                 {
                     ChangeDifficulty();
+                }
+                else if (button == 6)
+                {
+                    ChangeMode();
                 }
                 TimerStop();
             }
@@ -74,12 +79,29 @@ public class CanvasNavigation : MonoBehaviour
             if (zone.text == "Playzone 180°")
             {
                 zone.text = "Playzone 360°";
-                AngleHandler.instance.diff = -180;
+                GameController.instance.diff = -180;
             }
             else
             {
                 zone.text = "Playzone 180°";
-                AngleHandler.instance.diff = 0;
+                GameController.instance.diff = 0;
+            }
+        }
+    }
+
+    public void ChangeMode()
+    {
+        if ((int)timer == timeToInteract)
+        {
+            if (mode.text == "Бесконечный режим (нет)")
+            {
+                mode.text = "Бесконечный режим (да)";
+                GameController.instance.mode = 1;
+            }
+            else
+            {
+                mode.text = "Playzone 180°";
+                GameController.instance.mode = 0;
             }
         }
     }
