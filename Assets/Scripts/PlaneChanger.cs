@@ -6,12 +6,13 @@ using UnityEngine.SceneManagement;
 public class PlaneChanger : MonoBehaviour
 {
     [SerializeField] TextMesh stars;
-    [SerializeField] private GameObject[] planes;
-    [SerializeField] private int[] onStarChane; //При таких кол-вах собранных звезд будет меняться самолет.
-    private int selectedPlane = 0;
+    [SerializeField] GameObject EndGamePanel;
+    [SerializeField] GameObject[] planes;
+    [SerializeField] int[] onStarChane; //При таких кол-вах собранных звезд будет меняться самолет.
+    int selectedPlane = 0;
 
-    private int _points;
-    private int points 
+    int _points;
+    int points 
     { 
         set 
         {
@@ -32,16 +33,16 @@ public class PlaneChanger : MonoBehaviour
         points += star.starCost;
         star.onCatch();
         stars.text = points.ToString();
-        if (GameController.instance.mode == 1)
+        if (GameController.instance.mode == 0)
         {
-            if (points >= 250)
+            if (points >= onStarChane[onStarChane.Length - 1] + 50)
             {
-                SceneManager.LoadScene(0);
+                StartCoroutine("EndGame");
             }
         }
     }
 
-    private void changePlane()
+    void changePlane()
     {
         for (int i = 0; i < onStarChane.Length; ++i)
         {
@@ -54,5 +55,12 @@ public class PlaneChanger : MonoBehaviour
                 }
             }
         }
+    }
+
+    IEnumerator EndGame()
+    {
+        EndGamePanel.SetActive(true);
+        yield return new WaitForSeconds(5);
+        SceneManager.LoadScene(0);
     }
 }

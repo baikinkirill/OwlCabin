@@ -100,7 +100,7 @@ public class CanvasNavigation : MonoBehaviour
             }
             else
             {
-                mode.text = "Playzone 180°";
+                mode.text = "Бесконечный режим (нет)";
                 GameController.instance.mode = 0;
             }
         }
