@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 8e34ceab9e2bfba4c8108b4bfbac28b9, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: d6d947cc7c29e854c8acd1ed8d833b45, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -593,6 +593,7 @@ MonoBehaviour:
   ignoreAngle: 1.5
   rigidbody: {fileID: 1024496176}
   planeAnimator: {fileID: 1024496177}
+  PC: {fileID: 0}
 --- !u!1 &349240855 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 81451d931dcdaae4f9b131b25a2f8a63,
@@ -3854,6 +3855,7 @@ MonoBehaviour:
   - {fileID: 1578716015}
   - {fileID: 1083436920}
   onStarChane: 320000006400000096000000c8000000
+  selectedPlane: 0
 --- !u!1 &7036213049702055944
 GameObject:
   m_ObjectHideFlags: 0
