@@ -3844,6 +3844,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8210f171bbd05b8409a3189b85fb528f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Animator: {fileID: 1024496177}
   stars: {fileID: 1751672133}
   EndGamePanel: {fileID: 1788565133}
   planes:

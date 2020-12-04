@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PlaneChanger : MonoBehaviour
 {
+    [SerializeField] Animator Animator;
     [SerializeField] TextMesh stars;
     [SerializeField] GameObject EndGamePanel;
     [SerializeField] GameObject[] planes;
@@ -27,7 +28,6 @@ public class PlaneChanger : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        Debug.Log(points);
         if(other.tag != "Star") { return; }
         Star star = other.GetComponent<Star>();
         points += star.starCost;
@@ -52,6 +52,10 @@ public class PlaneChanger : MonoBehaviour
                 {
                     bool active = (selectedPlane == y) ? true : false;
                     planes[y].SetActive(active);
+                    if (selectedPlane == planes.Length - 1)
+                    {
+                        Animator.enabled = false;
+                    }
                 }
             }
         }
