@@ -52,10 +52,10 @@ public class PlaneChanger : MonoBehaviour
                 {
                     bool active = (selectedPlane == y) ? true : false;
                     planes[y].SetActive(active);
-                    if (selectedPlane == planes.Length - 1)
-                    {
-                        Animator.enabled = false;
-                    }
+                    //if (selectedPlane == planes.Length - 1)
+                    //{
+                    //    Animator.enabled = false;
+                    //}
                 }
             }
         }
