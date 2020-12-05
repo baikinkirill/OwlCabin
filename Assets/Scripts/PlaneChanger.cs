@@ -67,4 +67,9 @@ public class PlaneChanger : MonoBehaviour
         yield return new WaitForSeconds(5);
         SceneManager.LoadScene(0);
     }
+
+    public bool isUfo() //UFO - last plane
+    {
+        return (onStarChane[onStarChane.Length - 2] <= points) ? true : false;
+    }
 }
