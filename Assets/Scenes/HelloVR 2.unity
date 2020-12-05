@@ -588,6 +588,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveDirection: {fileID: 959308588}
+  planeChanger: {fileID: 6905609870875537556}
   speed: 0.64
   plane: {fileID: 543450653463747292}
   ignoreAngle: 1.5

@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlaneRotation : MonoBehaviour
 {
     [SerializeField] private MoveDirection moveDirection;
+    [SerializeField] private PlaneChanger planeChanger;
     [Range(0, 5)]
     [SerializeField] private float speed = 3f;
     [SerializeField] private Transform plane;
@@ -28,7 +29,7 @@ public class PlaneRotation : MonoBehaviour
         angle = Vector3.SignedAngle(targetDir, planeDir, gameObject.transform.up);
 
 
-        if (Mathf.Abs(angle) > ignoreAngle)
+        if (Mathf.Abs(angle) > ignoreAngle && !planeChanger.isUfo())
         {
             planeAnimator.SetBool("waiting", false);
             if (angle < 0)
@@ -44,13 +45,22 @@ public class PlaneRotation : MonoBehaviour
                 planeAnimator.SetBool("isRight", false);
             }
         }
-        else
+        else if (Mathf.Abs(angle) <= ignoreAngle && !planeChanger.isUfo())
         {
             planeAnimator.SetBool("waiting", true);
             planeAnimator.SetBool("isLeft", false);
             planeAnimator.SetBool("isRight", false);
             flightStatus = false;
         }
+        else if (Mathf.Abs(angle) > ignoreAngle && planeChanger.isUfo())    //Режим НЛО без переворота.
+        {
+            planeAnimator.SetBool("waiting", false);
+            planeAnimator.SetBool("isLeft", true);
+            planeAnimator.SetBool("fromRightToLeft", true);
+            planeAnimator.SetBool("isRight", false);
+        }
+
+
 
         if (!flightStatus) { return; }
 

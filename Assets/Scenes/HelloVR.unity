@@ -588,12 +588,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveDirection: {fileID: 959308588}
+  planeChanger: {fileID: 6905609870875537556}
   speed: 0.64
   plane: {fileID: 543450653463747292}
   ignoreAngle: 1.5
   rigidbody: {fileID: 1024496176}
   planeAnimator: {fileID: 1024496177}
-  PC: {fileID: 6905609870875537556}
 --- !u!1 &349240855 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 81451d931dcdaae4f9b131b25a2f8a63,
@@ -3311,7 +3311,6 @@ MonoBehaviour:
   - {fileID: 1578716015}
   - {fileID: 715573169}
   onStarChane: 320000006400000096000000c8000000
-  selectedPlane: 0
 --- !u!1 &7036213049702055944
 GameObject:
   m_ObjectHideFlags: 0
