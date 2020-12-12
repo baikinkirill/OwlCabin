@@ -3854,7 +3854,7 @@ MonoBehaviour:
   - {fileID: 1654718205}
   - {fileID: 1578716015}
   - {fileID: 1169240589}
-  onStarChane: 320000006400000096000000c8000000
+  onStarChane: 14000000280000003c00000050000000
 --- !u!1 &7036213049702055944
 GameObject:
   m_ObjectHideFlags: 0
