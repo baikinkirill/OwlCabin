@@ -35,7 +35,7 @@ public class PlaneChanger : MonoBehaviour
         stars.text = points.ToString();
         if (GameController.instance.mode == 0)
         {
-            if (points >= onStarChane[onStarChane.Length - 1] + 50)
+            if (points >= onStarChane[onStarChane.Length - 1] + 20)
             {
                 StartCoroutine("EndGame");
             }

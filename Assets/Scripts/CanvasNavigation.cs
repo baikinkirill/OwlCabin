@@ -46,6 +46,10 @@ public class CanvasNavigation : MonoBehaviour
                 {
                     ChangeMode();
                 }
+                if (button == 7)
+                {
+                    LoadMap(0);
+                }
                 TimerStop();
             }
         }
