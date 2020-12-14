@@ -54,10 +54,7 @@ public class PlaneRotation : MonoBehaviour
         }
         else if (Mathf.Abs(angle) > ignoreAngle && planeChanger.isUfo())    //Режим НЛО без переворота.
         {
-            planeAnimator.SetBool("waiting", false);
-            planeAnimator.SetBool("isLeft", true);
-            planeAnimator.SetBool("fromRightToLeft", true);
-            planeAnimator.SetBool("isRight", false);
+            planeAnimator.SetBool("ufo", true);
         }
 
 

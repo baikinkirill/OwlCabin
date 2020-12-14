@@ -70,6 +70,6 @@ public class PlaneChanger : MonoBehaviour
 
     public bool isUfo() //UFO - last plane
     {
-        return (onStarChane[onStarChane.Length - 2] <= points) ? true : false;
+        return (onStarChane[onStarChane.Length - 1] <= points) ? true : false;
     }
 }
