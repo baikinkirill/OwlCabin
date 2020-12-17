@@ -1383,6 +1383,16 @@ PrefabInstance:
       propertyPath: mode
       value: 
       objectReference: {fileID: 1955072636}
+    - target: {fileID: 7478766789514440747, guid: bcd5f72c2ec8f5044b591e680f99bfe9,
+        type: 3}
+      propertyPath: m_Text
+      value: "\u0420\u0430\u0432\u043D\u0438\u043D\u043D\u044B\u0439 \u0437\u0430\u043A\u0430\u0442"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7478766789553352931, guid: bcd5f72c2ec8f5044b591e680f99bfe9,
+        type: 3}
+      propertyPath: m_Text
+      value: "\u041C\u0438\u043D\u0438\u043C\u0430\u043B\u0438\u0437\u043C"
+      objectReference: {fileID: 0}
     - target: {fileID: 7478766789720400253, guid: bcd5f72c2ec8f5044b591e680f99bfe9,
         type: 3}
       propertyPath: m_TagString
@@ -1532,6 +1542,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7478766789999744693, guid: bcd5f72c2ec8f5044b591e680f99bfe9,
+        type: 3}
+      propertyPath: m_Text
+      value: "\u041F\u0443\u0441\u0442\u044B\u043D\u044F"
       objectReference: {fileID: 0}
     - target: {fileID: 7478766790092217223, guid: bcd5f72c2ec8f5044b591e680f99bfe9,
         type: 3}
@@ -3447,9 +3462,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Map4
-
-'
+  m_Text: "\u041F\u0443\u0441\u0442\u044B\u043D\u043D\u044B\u0439 \u0432\u0435\u0447\u0435\u0440"
 --- !u!222 &2031365337
 CanvasRenderer:
   m_ObjectHideFlags: 0

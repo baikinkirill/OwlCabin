@@ -10,6 +10,7 @@ public class CanvasNavigation : MonoBehaviour
     [SerializeField] Text zone;
     [SerializeField] Text mode;
     [SerializeField] Image imageCircle;
+
     private float timer
     {
         set
@@ -26,6 +27,11 @@ public class CanvasNavigation : MonoBehaviour
     private float _timer = 0f;
     bool enter = false;
     int button = 0;
+
+    private void Awake()
+    {
+        updateCircle();
+    }
 
     private void Update()
     {
@@ -45,6 +51,10 @@ public class CanvasNavigation : MonoBehaviour
                 else if (button == 6)
                 {
                     ChangeMode();
+                }
+                if (button == 7)
+                {
+                    LoadMap(0);
                 }
                 TimerStop();
             }
