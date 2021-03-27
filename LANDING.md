@@ -9,13 +9,13 @@ Owl Cabin - Летай - созерцай - собирай - улучшай
 
 ---
 # Images
-* ![](https://files.rtuitlab.ru/landing_src/owlcabin/1.png)
-* ![](https://files.rtuitlab.ru/landing_src/owlcabin/2.png)
-* ![](https://files.rtuitlab.ru/landing_src/owlcabin/3.png)
-* ![](https://files.rtuitlab.ru/landing_src/owlcabin/4.png)
-* ![](https://files.rtuitlab.ru/landing_src/owlcabin/5.png)
-* ![](https://files.rtuitlab.ru/landing_src/owlcabin/6.png)
-* ![](https://files.rtuitlab.ru/landing_src/owlcabin/7.png)
+* ![](LANDING/1.png)
+* ![](LANDING/2.png)
+* ![](LANDING/3.png)
+* ![](LANDING/4.png)
+* ![](LANDING/5.png)
+* ![](LANDING/6.png)
+* ![](LANDING/7.png)
 
 ---
 # Videos
